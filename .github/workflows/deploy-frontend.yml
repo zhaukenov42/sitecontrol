@@ -32,8 +32,7 @@ jobs:
         working-directory: client
         env:
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
-          NODE_ENV: production
-        run: npm run build
+        run: npx vite build --mode production
 
       - uses: actions/upload-pages-artifact@v3
         with:
